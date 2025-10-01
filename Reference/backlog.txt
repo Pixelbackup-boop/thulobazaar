@@ -1,0 +1,236 @@
+ELWs-MacBook-Pro:backend elw$ npm run dev
+
+> backend@1.0.0 dev
+> nodemon server.js
+
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node server.js`
+[dotenv@17.2.2] injecting env (16) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.2] injecting env (0) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+
+==================================================
+🚀 Thulobazaar Server Started Successfully!
+==================================================
+📌 Environment: development
+📌 Port: 5000
+📌 Database: thulobazaar
+📌 Server: http://localhost:5000
+
+📡 API Endpoints:
+   - http://localhost:5000/api/test
+   - http://localhost:5000/api/ads
+   - http://localhost:5000/api/categories
+   - http://localhost:5000/api/locations
+   - http://localhost:5000/api/search (Typesense)
+
+🔒 Security Features:
+   ✅ Helmet.js - Security headers
+   ✅ CORS - Cross-origin protection
+   ✅ Rate limiting - DDoS protection
+   ✅ Input validation - Joi schemas
+   ✅ XSS protection - Data sanitization
+   ✅ SQL injection prevention
+   ✅ Database indexes - Performance
+==================================================
+
+Request #1759244175422: Request to Node 0 failed due to "ECONNREFUSED Error"
+Request #1759244175422: Sleeping for 0.1s and then retrying request...
+✅ Database connected successfully
+📊 Database: thulobazaar on localhost:5432
+Request #1759244175422: Request to Node 0 failed due to "ECONNREFUSED Error"
+❌ Typesense connection error: AxiosError [AggregateError]: Error
+    at AxiosError.from (/Users/elw/Documents/Web/thulobazaar/backend/node_modules/axios/dist/node/axios.cjs:905:14)
+    at RedirectableRequest.handleRequestError (/Users/elw/Documents/Web/thulobazaar/backend/node_modules/axios/dist/node/axios.cjs:3326:25)
+    at RedirectableRequest.emit (node:events:530:35)
+    at eventHandlers.<computed> (/Users/elw/Documents/Web/thulobazaar/backend/node_modules/follow-redirects/index.js:49:24)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:104:11)
+    at Socket.socketErrorListener (node:_http_client:518:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at Axios.request (/Users/elw/Documents/Web/thulobazaar/backend/node_modules/axios/dist/node/axios.cjs:4483:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 'ECONNREFUSED',
+  errors: [
+    Error: connect ECONNREFUSED ::1:8108
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -61,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 8108
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:8108
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -61,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 8108
+    }
+  ],
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function (anonymous)] ],
+    timeout: 2000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: Infinity,
+    maxBodyLength: Infinity,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'X-TYPESENSE-API-KEY': 'thulobazaar-dev-key',
+      'User-Agent': 'axios/1.12.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'http://localhost:8108/collections/ads',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      socket: [Array],
+      timeout: undefined,
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: Infinity,
+      protocol: 'http:',
+      path: '/collections/ads',
+      method: 'GET',
+      headers: [Object: null prototype],
+      agents: [Object],
+      auth: undefined,
+      family: undefined,
+      beforeRedirect: [Function: dispatchBeforeRedirect],
+      beforeRedirects: [Object],
+      hostname: 'localhost',
+      port: '8108',
+      agent: undefined,
+      nativeProtocols: [Object],
+      pathname: '/collections/ads'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /collections/ads HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'X-TYPESENSE-API-KEY: thulobazaar-dev-key\r\n' +
+        'User-Agent: axios/1.12.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: localhost:8108\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/collections/ads',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'http://localhost:8108/collections/ads',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  [cause]: AggregateError [ECONNREFUSED]: 
+      at internalConnectMultiple (node:net:1134:18)
+      at afterConnectMultiple (node:net:1715:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [ [Error], [Error] ]
+  }
+}
+
