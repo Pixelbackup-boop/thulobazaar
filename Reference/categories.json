@@ -1,0 +1,246 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mobiles",
+      "icon": "📱",
+      "subcategories": [
+        { "id": 101, "name": "Mobile Phones" },
+        { "id": 102, "name": "Mobile Phone Accessories" },
+        { "id": 103, "name": "Wearables" },
+        { "id": 104, "name": "SIM Cards" },
+        { "id": 105, "name": "Mobile Phone Services" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Electronics",
+      "icon": "💻",
+      "subcategories": [
+        { "id": 201, "name": "Laptops" },
+        { "id": 202, "name": "Laptop & Computer Accessories" },
+        { "id": 203, "name": "Desktop Computers" },
+        { "id": 204, "name": "Home Appliances" },
+        { "id": 205, "name": "ACs & Home Electronics" },
+        { "id": 206, "name": "Audio & Sound Systems" },
+        { "id": 207, "name": "TVs" },
+        { "id": 208, "name": "Cameras, Camcorders & Accessories" },
+        { "id": 209, "name": "Tablets & Accessories" },
+        { "id": 210, "name": "TV & Video Accessories" },
+        { "id": 211, "name": "Other Electronics" },
+        { "id": 212, "name": "Video Game Consoles & Accessories" },
+        { "id": 213, "name": "Photocopiers" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Vehicles",
+      "icon": "🚗",
+      "subcategories": [
+        { "id": 301, "name": "Cars" },
+        { "id": 302, "name": "Motorbikes" },
+        { "id": 303, "name": "Bicycles" },
+        { "id": 304, "name": "Auto Parts & Accessories" },
+        { "id": 305, "name": "Rentals" },
+        { "id": 306, "name": "Three Wheelers" },
+        { "id": 307, "name": "Trucks" },
+        { "id": 308, "name": "Vans" },
+        { "id": 309, "name": "Heavy Duty" },
+        { "id": 310, "name": "Water Transport" },
+        { "id": 311, "name": "Buses" },
+        { "id": 312, "name": "Auto Services" },
+        { "id": 313, "name": "Maintenance and Repair" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Home & Living",
+      "icon": "🏠",
+      "subcategories": [
+        { "id": 401, "name": "Bedroom Furniture" },
+        { "id": 402, "name": "Living Room Furniture" },
+        { "id": 403, "name": "Office & Shop Furniture" },
+        { "id": 404, "name": "Home Textiles & Decoration" },
+        { "id": 405, "name": "Household Items" },
+        { "id": 406, "name": "Kitchen & Dining Furniture" },
+        { "id": 407, "name": "Children's Furniture" },
+        { "id": 408, "name": "Doors" },
+        { "id": 409, "name": "Bathroom Products" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Property",
+      "icon": "🏢",
+      "subcategories": [
+        { "id": 501, "name": "Land For Sale" },
+        { "id": 502, "name": "Apartments For Sale" },
+        { "id": 503, "name": "Apartment Rentals" },
+        { "id": 504, "name": "Commercial Property Rentals" },
+        { "id": 505, "name": "Houses For Sale" },
+        { "id": 506, "name": "Commercial Properties For Sale" },
+        { "id": 507, "name": "Room Rentals" },
+        { "id": 508, "name": "House Rentals" },
+        { "id": 509, "name": "Land Rentals" },
+        { "id": 510, "name": "New projects on PropertyGuide" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Pets & Animals",
+      "icon": "🐾",
+      "subcategories": [
+        { "id": 601, "name": "Pets" },
+        { "id": 602, "name": "Farm Animals" },
+        { "id": 603, "name": "Pet & Animal Accessories" },
+        { "id": 604, "name": "Pet & Animal food" },
+        { "id": 605, "name": "Other Pets & Animals" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Men's Fashion & Grooming",
+      "icon": "👔",
+      "subcategories": [
+        { "id": 701, "name": "Watches" },
+        { "id": 702, "name": "Shirts & T-Shirts" },
+        { "id": 703, "name": "Footwear" },
+        { "id": 704, "name": "Bags & Accessories" },
+        { "id": 705, "name": "Grooming & Bodycare" },
+        { "id": 706, "name": "Pants" },
+        { "id": 707, "name": "Traditional Clothing" },
+        { "id": 708, "name": "Jacket & Coat" },
+        { "id": 709, "name": "Optical & Sunglasses" },
+        { "id": 710, "name": "Baby Boy's Fashion" },
+        { "id": 711, "name": "Wholesale - Bulk" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Women's Fashion & Beauty",
+      "icon": "👗",
+      "subcategories": [
+        { "id": 801, "name": "Traditional Wear" },
+        { "id": 802, "name": "Beauty & Personal Care" },
+        { "id": 803, "name": "Jewellery & Watches" },
+        { "id": 804, "name": "Bags & Accessories" },
+        { "id": 805, "name": "Western Wear" },
+        { "id": 806, "name": "Baby Girl's Fashion" },
+        { "id": 807, "name": "Footwear" },
+        { "id": 808, "name": "Lingerie & Sleepwear" },
+        { "id": 809, "name": "Wholesale - Bulk" },
+        { "id": 810, "name": "Winter Wear" },
+        { "id": 811, "name": "Optical & Sunglasses" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Hobbies, Sports & Kids",
+      "icon": "⚽",
+      "subcategories": [
+        { "id": 901, "name": "Musical Instruments" },
+        { "id": 902, "name": "Sports" },
+        { "id": 903, "name": "Children's Items" },
+        { "id": 904, "name": "Other Hobby, Sport & Kids items" },
+        { "id": 905, "name": "Fitness & Gym" },
+        { "id": 906, "name": "Music, Books & Movies" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Business & Industry",
+      "icon": "🏭",
+      "subcategories": [
+        { "id": 1001, "name": "Industry Machinery & Tools" },
+        { "id": 1002, "name": "Other Business & Industry Items" },
+        { "id": 1003, "name": "Office Supplies & Stationary" },
+        { "id": 1004, "name": "Medical Equipment & Supplies" },
+        { "id": 1005, "name": "Raw Materials & Industrial Supplies" },
+        { "id": 1006, "name": "Licences, Titles & Tenders" },
+        { "id": 1007, "name": "Safety & Security" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Education",
+      "icon": "📚",
+      "subcategories": [
+        { "id": 1101, "name": "Textbooks" },
+        { "id": 1102, "name": "Tuition" },
+        { "id": 1103, "name": "Courses" },
+        { "id": 1104, "name": "Study Abroad" },
+        { "id": 1105, "name": "Other Education" }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Essentials",
+      "icon": "🛒",
+      "subcategories": [
+        { "id": 1201, "name": "Grocery" },
+        { "id": 1202, "name": "Healthcare" },
+        { "id": 1203, "name": "Other Essentials" },
+        { "id": 1204, "name": "Household" },
+        { "id": 1205, "name": "Baby Products" },
+        { "id": 1206, "name": "Fruits & Vegetables" },
+        { "id": 1207, "name": "Meat & Seafood" }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Jobs",
+      "icon": "💼",
+      "subcategories": [
+        { "id": 1301, "name": "Accounting & Finance" },
+        { "id": 1302, "name": "Administrative & Office" },
+        { "id": 1303, "name": "Construction & Trades" },
+        { "id": 1304, "name": "Healthcare & Medical" },
+        { "id": 1305, "name": "IT & Technology" },
+        { "id": 1306, "name": "Retail & Sales" },
+        { "id": 1307, "name": "Transportation & Logistics" },
+        { "id": 1308, "name": "Other Jobs" }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Services",
+      "icon": "🔧",
+      "subcategories": [
+        { "id": 1401, "name": "Servicing & Repair" },
+        { "id": 1402, "name": "Media & Event Management Services" },
+        { "id": 1403, "name": "Tours & Travels" },
+        { "id": 1404, "name": "IT Services" },
+        { "id": 1405, "name": "Building maintenance" },
+        { "id": 1406, "name": "Professional Services" },
+        { "id": 1407, "name": "Matrimonials" },
+        { "id": 1408, "name": "Fitness & Beauty Services" },
+        { "id": 1409, "name": "Domestic & Daycare Services" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Agriculture",
+      "icon": "🌾",
+      "subcategories": [
+        { "id": 1501, "name": "Crops, Seeds & Plants" },
+        { "id": 1502, "name": "Farming Tools & Machinery" },
+        { "id": 1503, "name": "Other Agriculture" }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Overseas Jobs",
+      "icon": "✈️",
+      "subcategories": [
+        { "id": 1601, "name": "Bulgaria" },
+        { "id": 1602, "name": "Croatia" },
+        { "id": 1603, "name": "Serbia" },
+        { "id": 1604, "name": "Saudi Arabia" },
+        { "id": 1605, "name": "UAE" },
+        { "id": 1606, "name": "Qatar" },
+        { "id": 1607, "name": "Malaysia" },
+        { "id": 1608, "name": "Singapore" }
+      ]
+    }
+  ]
+}
