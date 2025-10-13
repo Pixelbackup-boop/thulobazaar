@@ -1,4 +1,4 @@
-tttt
+# 🛒 ThuLoBazaar - Nepal's Classified Marketplace
 
 **Status:** 🟢 Active Development - 75% Complete
 **Target:** MVP Launch in 3-4 weeks
