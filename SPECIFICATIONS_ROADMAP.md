@@ -34,6 +34,30 @@ This document tracks the implementation of category-specific specification templ
    - Note: Gender field included in template but redundant (Men's Fashion & Women's Fashion are separate categories). Condition field hidden for Fashion ads.
    - Status: ✅ Fully Implemented (Form + Display)
 
+5. **Home & Living** (Category 4)
+   - Display Component: `HomeLivingSpecs.jsx`
+   - Form Template: `HomeLivingForm.jsx`
+   - Template Type: 'general'
+   - Fields: Condition, Brand, Furniture Type (required), Material, Color/Finish, Dimensions, Assembly Required, Seating Capacity, Storage Available, Style
+   - Note: Uses 'general' template type with category ID check in PostAd.jsx to ensure correct rendering
+   - Status: ✅ Fully Implemented (Form + Display)
+
+6. **Pets & Animals** (Category 6)
+   - Display Component: `PetsSpecs.jsx`
+   - Form Template: `PetsForm.jsx`
+   - Template Type: 'pets'
+   - Fields: Animal Type (required), Breed, Age (required), Gender, Vaccination Status (required), Pet Papers/Documents, Color/Coat, Weight, Training Status, Friendly With, Product Type (for accessories/food), Suitable For
+   - Status: ✅ Fully Implemented (Form + Display)
+
+7. **Services & Jobs** (Categories 9, 13, 14)
+   - Display Component: `ServicesSpecs.jsx`
+   - Form Template: `ServicesForm.jsx`
+   - Template Type: 'services'
+   - Fields: Service Type, Experience, Availability, Service Location, Languages, Experience Required, Salary Range, Education Required, Company Name, Subjects, Grade Level, Mode of Teaching, Country, Job Position, Visa Type
+   - Note: Covers multiple use cases - Services, Jobs, Tuition, and Overseas Employment
+   - Categories: 9 (Services), 13 (Jobs), 14 (Education)
+   - Status: ✅ Fully Implemented (Form + Display)
+
 ---
 
 ## Priority Queue for Implementation
@@ -120,90 +144,56 @@ This document tracks the implementation of category-specific specification templ
 
 ---
 
-### 🛋️ 4. Home & Living Specs (Category 4)
+### ~~🛋️ 4. Home & Living Specs (Category 4)~~ ✅ COMPLETED
 **Priority: MEDIUM** - Furniture needs dimensions
 
-**Subcategories:**
-- 401: Bedroom Furniture
-- 402: Living Room Furniture
-- 403: Office & Shop Furniture
-- 406: Kitchen & Dining Furniture
-- 407: Children's Furniture
-
-**Specification Fields:**
-```javascript
-{
-  itemType: 'Item Type (Bed, Sofa, Table, Chair, Wardrobe)',
-  material: 'Material (Wood, Metal, Plastic, Glass, Fabric)',
-  color: 'Color/Finish',
-  dimensions: 'Dimensions (Length × Width × Height)',
-  brand: 'Brand',
-  roomType: 'Room Type (Bedroom, Living Room, Kitchen, Office)',
-  assemblyRequired: 'Assembly Required (Yes/No)',
-  seatingCapacity: 'Seating Capacity (for sofas, dining sets)',
-  storage: 'Storage Available (Yes/No)',
-  weight: 'Weight/Weight Capacity',
-  style: 'Style (Modern, Traditional, Vintage, Minimalist)'
-}
-```
-
-**Component Name:** `HomeLivingSpecs.jsx`
-
 ---
 
-### 🐾 5. Pets & Animals Specs (Category 6)
+### ~~🐾 5. Pets & Animals Specs (Category 6)~~ ✅ COMPLETED
 **Priority: LOW-MEDIUM**
 
-**Subcategories:**
-- 601: Pets
-- 602: Farm Animals
-- 603: Pet & Animal Accessories
-- 604: Pet & Animal food
-
-**Specification Fields:**
-```javascript
-{
-  type: 'Type (Dog, Cat, Bird, Fish, etc.)',
-  breed: 'Breed',
-  age: 'Age (months/years)',
-  gender: 'Gender (Male/Female)',
-  vaccinated: 'Vaccinated (Yes/No)',
-  trained: 'Trained (Yes/No)',
-  color: 'Color/Marking',
-  weight: 'Weight',
-  pedigree: 'Pedigree/Certificate Available (Yes/No)',
-  temperament: 'Temperament (Friendly, Active, Calm, etc.)',
-  healthStatus: 'Health Status'
-}
-```
-
-**Component Name:** `PetsSpecs.jsx`
-
 ---
 
-### 💼 6. Jobs Specs (Category 13)
-**Priority: MEDIUM** - Different structure, needs custom component
+### ~~💼 6. Services & Jobs Specs (Categories 9, 13, 14)~~ ✅ COMPLETED
+**Priority: MEDIUM** - Different structure, covers multiple service types
 
-**Note:** This might need a completely different UI layout than product specs.
+**Note:** Uses a unified ServicesSpecs component that handles Services, Jobs, Tuition, and Overseas Employment.
+
+**Categories:**
+- 9: Services
+- 13: Jobs
+- 14: Education (Tuition)
+- Overseas Jobs subcategories
 
 **Specification Fields:**
 ```javascript
 {
-  jobTitle: 'Job Title',
-  companyName: 'Company Name',
-  jobType: 'Job Type (Full-time, Part-time, Contract, Freelance)',
-  experienceRequired: 'Experience Required (in years)',
+  // Service fields
+  serviceType: 'Service Type',
+  experience: 'Experience',
+  availability: 'Availability',
+  serviceLocation: 'Service Location',
+  languages: 'Languages Known',
+
+  // Job fields
+  experienceRequired: 'Experience Required',
   salaryRange: 'Salary Range',
-  educationLevel: 'Education Level Required',
-  industry: 'Industry',
-  skillsRequired: 'Skills Required',
-  benefits: 'Benefits (Health Insurance, PF, Bonus, etc.)',
-  vacancies: 'Number of Vacancies',
-  applicationDeadline: 'Application Deadline'
+  educationRequired: 'Education Required',
+  companyName: 'Company Name',
+
+  // Tuition fields
+  subjects: 'Subjects',
+  gradeLevel: 'Grade/Level',
+  modeOfTeaching: 'Mode of Teaching',
+
+  // Overseas Jobs fields
+  country: 'Country',
+  jobPosition: 'Job Position',
+  visaType: 'Visa Type'
 }
 ```
 
-**Component Name:** `JobsSpecs.jsx`
+**Component Names:** `ServicesSpecs.jsx` and `ServicesForm.jsx`
 
 ---
 
@@ -216,10 +206,20 @@ frontend/src/components/ad-details/specs/
 ├── VehiclesSpecs.jsx ✅
 ├── PropertySpecs.jsx ✅
 ├── FashionSpecs.jsx ✅
-├── HomeLivingSpecs.jsx (Next)
-├── PetsSpecs.jsx
-├── JobsSpecs.jsx
+├── HomeLivingSpecs.jsx ✅
+├── PetsSpecs.jsx ✅
+├── ServicesSpecs.jsx ✅
 └── TemplateSpecs.css
+
+frontend/src/components/post-ad/templates/
+├── ElectronicsForm.jsx ✅
+├── VehiclesForm.jsx ✅
+├── PropertyForm.jsx ✅
+├── FashionForm.jsx ✅
+├── HomeLivingForm.jsx ✅
+├── PetsForm.jsx ✅
+├── ServicesForm.jsx ✅
+└── TemplateForm.css
 ```
 
 ### Component Template
