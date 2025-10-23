@@ -225,10 +225,36 @@ When ready to continue migration:
 
 ---
 
-**Status:** ✅ Phase 1 Complete - Ready for Production
-**Site Working:** Yes, no errors
+## 🔧 CORS Fix Applied (October 23, 2025)
+
+**Issue:** Post-ad page showed CORS errors when accessing Express backend
+**Root Cause:** Backend CORS configuration didn't allow localhost:3333 (new monorepo port)
+**Fix Applied:**
+- Updated `backend/server.js` line 73
+- Added `http://localhost:3333` to allowed origins
+- Restarted Express backend
+
+**File Modified:**
+```javascript
+// backend/server.js line 73
+app.use(cors({
+  origin: ['http://localhost:3333', 'http://localhost:3000', 'http://localhost:5173', ...],
+  credentials: true
+}));
+```
+
+**Verification:**
+```bash
+curl -H "Origin: http://localhost:3333" -I http://localhost:5000/api/categories
+# Returns: Access-Control-Allow-Origin: http://localhost:3333 ✅
+```
+
+---
+
+**Status:** ✅ Phase 1 Complete + CORS Fixed
+**Site Working:** Yes, fully functional including post-ad page
 **Can Delete Frontend:** Yes (optional, keep for admin dashboard reference)
 **Can Delete Backend:** No, not yet
 
 **Last Updated:** October 23, 2025
-**Next Step:** Commit changes and test thoroughly
+**Next Step:** Test post-ad page thoroughly
