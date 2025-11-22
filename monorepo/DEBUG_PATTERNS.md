@@ -650,6 +650,38 @@ echo "✅ Done! Now restart dev server and hard refresh browser."
 - Bug #1: If you see snake_case instead of camelCase, might be using old transformers from cache
 - Build errors: TypeScript errors in packages prevent app from starting
 
+**Variation: Internal Server Error After Adding New Features**
+**Date:** 2025-11-16
+**Symptom:** "Internal Server Error" on specific pages after adding new API integrations
+
+**Error in Logs:**
+```
+Error: ENOENT: no such file or directory, open '.next/server/app/[lang]/editor/dashboard/page/app-build-manifest.json'
+Error: ENOENT: no such file or directory, open '.next/static/development/_buildManifest.js.tmp.xxx'
+```
+
+**Root Cause:**
+Corrupted .next build cache after adding new backend endpoints and API integrations. The build manifest files got corrupted during hot reload.
+
+**Solution:**
+```bash
+# Clear .next cache
+rm -rf .turbo apps/web/.next apps/web/.turbo
+
+# Kill all processes on port 3333
+lsof -ti:3333 | xargs kill -9
+
+# Restart dev server
+npm run dev:web
+```
+
+**Impact:** 🔴 CRITICAL - Page completely broken with 500 error
+
+**Prevention:**
+- Clear cache after major API integrations
+- Restart dev server if you see ENOENT errors in logs
+- Don't ignore build manifest errors - they indicate cache corruption
+
 ---
 
 ### Bug #7: Database Enum Value Mismatch - Verification Status
